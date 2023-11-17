@@ -31,3 +31,51 @@ def both(n):
 
 
 # both(5)
+
+# Practice Question no - 03 Factorial
+def factorial(n):
+    assert int(n) >= 0, "Input must be Positive"
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+
+print(f"Factorial of {10} is :", factorial(10))
+
+# Practice Question no - 04 Sum
+def Sum(n):
+    assert int(n) >= 0, "Input must be Positive"
+    if n == 0:
+        return 0
+    else:
+        return n + Sum(n-1)
+
+
+print(f"Sum of {5} is :", Sum(5))
+
+
+# Practice Question no - 05 Sum of Digits
+def Sum_Of_Digits(n):
+    assert int(n) >= 0, "Input must be Positive"
+    if n == 0:
+        return 0
+
+    return int(n % 10 + Sum_Of_Digits(n//10))
+
+
+print(f"Sum of Digits {1342} is :", Sum_Of_Digits(1342))
+
+# Practice Question no - 06 Product of digits
+def Product_Of_Digits(n):
+    assert int(n) >= 0, "Input must be Positive"
+    if n%10 == n:
+        return n
+
+    return int(n % 10 * Product_Of_Digits(n//10))
+
+
+print(f"Product of {55} is :", Product_Of_Digits(55))
+
+
+# Practice Question no - 07 Reverse Number
