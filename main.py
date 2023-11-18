@@ -90,8 +90,8 @@ def reverse_Number(n):
     reverse_Number(n//10)
 
 
-reverse_Number(1234)
-print(f"The reverse of 1234 is: ", test)
+reverse_Number(12321)
+print(f"The reverse of 12321 is: ", test)
 
 
 # Way - 02
@@ -103,3 +103,15 @@ def rev_2(n, args):
 
 
 print(f"This is the second method Output of Reverse Number :", rev_2(1234, 4))
+
+
+# Practice Question no - 08 Palindrome
+def Palindrome(n, args):
+    if n == rev_2(n, args):
+        return True
+    else:
+        return False
+
+
+print(Palindrome(12321, 5)
+)
