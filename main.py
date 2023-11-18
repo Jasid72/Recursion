@@ -79,3 +79,27 @@ print(f"Product of {55} is :", Product_Of_Digits(55))
 
 
 # Practice Question no - 07 Reverse Number
+# Way 1
+test = 0
+def reverse_Number(n):
+    global test
+    if n == 0:
+        return
+    remender = n % 10
+    test = test * 10 + remender
+    reverse_Number(n//10)
+
+
+reverse_Number(1234)
+print(f"The reverse of 1234 is: ", test)
+
+
+# Way - 02
+def rev_2(n, args):
+    if n == 0:
+        return 0
+    rem = n % 10
+    return rem * 10 ** (args - 1) + rev_2(n // 10, args - 1)
+
+
+print(f"This is the second method Output of Reverse Number :", rev_2(1234, 4))
